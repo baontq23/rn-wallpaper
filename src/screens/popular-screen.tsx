@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import React from 'react';
+import { Box, Button, Text } from 'native-base';
 
 const PopularScreen = () => {
   return (
-    <View>
+    <Box bgColor={'darkBgColor'} safeArea style={styles.container}>
       <Text>PopularScreen</Text>
-    </View>
+      <Button>Test</Button>
+    </Box>
   );
 };
 
@@ -15,6 +17,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: 'center',
-    justifyContent: 'center'
+
+    alignItems: 'center'
   }
 });

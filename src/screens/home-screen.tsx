@@ -10,6 +10,10 @@ const HomeScreen = () => {
     <Tab.Navigator
       screenOptions={() => ({
         headerShown: false,
+        tabBarStyle: {
+          backgroundColor: '#151515',
+          borderTopWidth: 0
+        },
         tabBarLabelStyle: {
           fontWeight: 'bold'
         }
