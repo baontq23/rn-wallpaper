@@ -104,24 +104,30 @@ const PreviewScreen: React.FC<Props> = ({ route }) => {
               Download option
             </Text>
           </HStack>
-          <Actionsheet.Item
-            isLoading={isLoading}
-            onPress={() => handleSaveImage(image.url_k)}
-          >
-            {image.height_k + ' x ' + image.width_k}
-          </Actionsheet.Item>
-          <Actionsheet.Item
-            isLoading={isLoading}
-            onPress={() => handleSaveImage(image.url_3k)}
-          >
-            {image.height_3k + ' x ' + image.width_3k}
-          </Actionsheet.Item>
-          <Actionsheet.Item
-            isLoading={isLoading}
-            onPress={() => handleSaveImage(image.url_4k)}
-          >
-            {image.height_4k + ' x ' + image.width_4k}
-          </Actionsheet.Item>
+          {image.url_k && (
+            <Actionsheet.Item
+              isLoading={isLoading}
+              onPress={() => handleSaveImage(image.url_k)}
+            >
+              {image.height_k + ' x ' + image.width_k}
+            </Actionsheet.Item>
+          )}
+          {image.url_3k && (
+            <Actionsheet.Item
+              isLoading={isLoading}
+              onPress={() => handleSaveImage(image.url_3k)}
+            >
+              {image.height_3k + ' x ' + image.width_3k}
+            </Actionsheet.Item>
+          )}
+          {image.url_4k && (
+            <Actionsheet.Item
+              isLoading={isLoading}
+              onPress={() => handleSaveImage(image.url_4k)}
+            >
+              {image.height_4k + ' x ' + image.width_4k}
+            </Actionsheet.Item>
+          )}
           <Actionsheet.Item
             isLoading={isLoading}
             onPress={() => handleSaveImage(image.url_o)}
