@@ -63,10 +63,16 @@ const PopularScreen = ({ navigation }: Props) => {
         onRefresh={handleReload}
         style={styles.gridView}
         spacing={10}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <View style={styles.itemContainer}>
             <TouchableHighlight
-              onPress={() => navigation.navigate('Preview', { image: item })}
+              onPress={() =>
+                navigation.navigate('Preview', {
+                  image: item,
+                  listImages: data,
+                  currentIndex: index
+                })
+              }
             >
               <Image
                 src={item.url_q}

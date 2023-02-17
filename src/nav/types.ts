@@ -35,7 +35,11 @@ export type ImageProps = {
 };
 export type RootStackParamList = {
   Home: NavigatorScreenParams<HomeTabParamList>;
-  Preview: { image: ImageProps };
+  Preview: {
+    image: ImageProps;
+    listImages?: ImageProps[];
+    currentIndex?: number;
+  };
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
