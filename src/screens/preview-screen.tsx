@@ -1,5 +1,5 @@
 import { Alert, Platform, StyleSheet, PermissionsAndroid } from 'react-native';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ImageProps, RootStackParamList } from '@/nav/types';
 import AntDesign from 'react-native-vector-icons/AntDesign';
